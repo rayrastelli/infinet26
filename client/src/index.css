@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 10%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 10%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 10%);
+  --color-primary: hsl(210 100% 50%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(210 20% 96%);
+  --color-secondary-foreground: hsl(0 0% 10%);
+  --color-muted: hsl(210 20% 96%);
+  --color-muted-foreground: hsl(210 10% 40%);
+  --color-accent: hsl(210 20% 96%);
+  --color-accent-foreground: hsl(0 0% 10%);
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(210 20% 90%);
+  --color-input: hsl(210 20% 90%);
+  --color-ring: hsl(210 100% 50%);
+  
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+  --border: 210 20% 90%;
+}
+
+.dark {
+  --background: 0 0% 5%;
+  --foreground: 0 0% 95%;
+  --border: 210 20% 15%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
